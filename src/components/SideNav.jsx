@@ -1,9 +1,14 @@
 // src/components/SideNav.jsx
 import React from 'react';
 
-function SideNav({ isOpen, onClose, onNavigateToGridContent }) {
+function SideNav({ isOpen, onClose, onNavigateToGridContent, onNavigateToContactContent }) {
   const handleGridClick = () => {
     onNavigateToGridContent();
+    onClose();
+  };
+
+  const handleContactsClick = () => {
+    onNavigateToContactContent({ contentType: 'contacts' });
     onClose();
   };
 
@@ -65,6 +70,28 @@ function SideNav({ isOpen, onClose, onNavigateToGridContent }) {
                 <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07L14.5 14.5a3 3 0 0 0-4.24-4.24l-1.41 1.41"></path>
               </svg>
               View Grid Items
+            </button>
+            <button
+              onClick={handleContactsClick}
+              className="flex items-center text-gray-300 hover:text-white hover:bg-gray-700 p-3 rounded-lg w-full text-left transition-colors duration-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="mr-3"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3"></path>
+                <path d="m12 15-4-4 4-4"></path>
+                <path d="M16 5h-6a2 2 0 0 0-2 2v3"></path>
+              </svg>
+              View Contacts
             </button>
           </nav>
         </div>

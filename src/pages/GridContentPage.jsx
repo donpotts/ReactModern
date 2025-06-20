@@ -12,7 +12,6 @@ const GRID_DATA = [
     { id: 6, name: "Software F", description: "Boost your productivity with our intuitive software.", image: "https://placehold.co/100x100/EF4444/ffffff?text=SoftF" },
 ];
 
-
 function GridContentPage() {
   return (
     <div className="pt-24 pb-8 w-full max-w-4xl px-4 animate-fade-in">

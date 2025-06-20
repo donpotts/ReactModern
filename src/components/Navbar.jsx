@@ -4,7 +4,7 @@ function Navbar({ currentPage, isAuthenticated, onGoToLogin, onLogout, onToggleS
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-gray-800 bg-opacity-90 backdrop-blur-sm shadow-lg p-4 flex justify-between items-center text-white">
       <div className="flex items-center">
-        {isAuthenticated && (currentPage === 'home' || currentPage === 'grid') && (
+        {isAuthenticated && (currentPage === 'home' || currentPage === 'grid' || currentPage === 'contacts' || currentPage === 'success') && (
           <button
             onClick={onToggleSideNav}
             className="mr-4 text-gray-400 hover:text-white transition-colors duration-200"
